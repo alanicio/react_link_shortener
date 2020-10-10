@@ -1,13 +1,107 @@
-body {
+html, body, #app, #app>div {
+  height: 100%;
+  width: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+span {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-weight: bold;
+  color: #9c9ba3;
+}
+
+.title {
+  color: #34313c;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+  padding: 10px 10px;
+  background-color: #29d1d1;
+  border: none;
+  color: white;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.rounded {
+  border-radius: 50px;
+}
+
+
+/* Navbar component */
+.Navbar {
+  width: 86%;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0 7%;
+  overflow: hidden;
+}
+
+.Navbar .title {
+  font-size: 32px;
+}
+
+.Navbar .element {
+  display: inline-block;
+  padding: 2% 2%;
+  
+}
+
+.session-options {
+  float: right;
+}
+
+.session-options button {
+  width: 100px;
+  margin-top: 26%;
+}
+
+.Navbar span:hover{
+  color: #34313c;
+  cursor: pointer;
+}
+
+/* Header component */
+
+.Header {
+  width: 100%;
+}
+
+.half{
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.text-block{
+  width: 60%;
+  padding: 7% 17%;
+}
+
+.Header .title {
+  font-size: 60px;
+}
+
+.Header .text {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.Header button {
+  margin-top: 5%;
+  width: 150px;
+}
+
+.ilustration-working {
+  background-image: url('/images/illustration-working.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
 }
