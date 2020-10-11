@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 
 function Link(originalLink, hashid) {
+  this.id = uuidv4();
   this.originalLink = originalLink;
   this.shortenedLink = `https://rel.ink/${hashid}`;
 }
@@ -32,7 +34,6 @@ const Shortener = ({ addLink }) => {
         setUrl("");
       })
       .catch((error) => {
-        console.log(error);
         setError(true);
       });
   };

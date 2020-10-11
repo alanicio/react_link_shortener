@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
+import Link from "./components/Link";
 import Navbar from "./components/Navbar";
 import Shortener from "./components/Shortener";
 
@@ -18,7 +19,12 @@ function App() {
     <>
       <Navbar />
       <Header />
-      <Shortener addLink={addLink} />
+      <div className="content">
+        <Shortener addLink={addLink} />
+        {links.map((link) => (
+          <Link key={link.id} link={link} />
+        ))}
+      </div>
     </>
   );
 }

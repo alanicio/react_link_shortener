@@ -32,8 +32,17 @@ button {
   border-radius: 6px;
 }
 
+button:hover {
+  background-color: #9be3e2;
+}
+
 .rounded {
   border-radius: 50px;
+}
+
+.content {
+  height: 800px;
+  background-color: #f0f1f6;
 }
 
 /* Navbar component */
@@ -117,9 +126,9 @@ button {
   background-color: #3a3053;
   padding: 2% 3%;
   width: 60%;
-  position: absolute;
-  top: 74%;
-  left: 15%;
+  margin: auto;
+  position: relative;
+  top: -7%;
   border-radius: 10px;
 }
 
@@ -138,4 +147,53 @@ button {
 
 .Shortener .error {
   color: #e6676c;
+}
+
+/* Link component */
+
+.Link {
+  position: relative;
+  top: -7%;
+  width: 62%;
+  margin: 1% auto;
+  padding: 1% 2%;
+  background-color: white;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.Link div {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.original-link {
+  width: 68%;
+}
+
+.original-link a {
+  color: #34313c;
+}
+
+.shortened-link {
+  width: 20%;
+}
+
+.shortened-link a {
+  color: #29d1d1;
+}
+
+.copy-button {
+  margin-left: 2%;
+}
+
+.Link button {
+  width: 100px;
+}
+
+.Link a {
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-decoration: none;
+  font-weight: 500;
 }
