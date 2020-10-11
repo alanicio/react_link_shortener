@@ -1,3 +1,11 @@
+## Give it a look!
+
+https://boring-noether-620c45.netlify.app/
+
+## IMPORTANT!
+
+The only interactive part is the url shortener and the generated urls.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
