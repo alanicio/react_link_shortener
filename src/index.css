@@ -1,4 +1,7 @@
-html, body, #app, #app>div {
+html,
+body,
+#app,
+#app > div {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -17,8 +20,8 @@ span {
 
 button {
   -webkit-appearance: none;
-  -moz-appearance:    none;
-  appearance:         none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 10px 10px;
   background-color: #29d1d1;
   border: none;
@@ -26,12 +29,12 @@ button {
   font-family: "Arial Black", Gadget, sans-serif;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 6px;
 }
 
 .rounded {
   border-radius: 50px;
 }
-
 
 /* Navbar component */
 .Navbar {
@@ -51,7 +54,6 @@ button {
 .Navbar .element {
   display: inline-block;
   padding: 2% 2%;
-  
 }
 
 .session-options {
@@ -63,7 +65,7 @@ button {
   margin-top: 26%;
 }
 
-.Navbar span:hover{
+.Navbar span:hover {
   color: #34313c;
   cursor: pointer;
 }
@@ -74,13 +76,13 @@ button {
   width: 100%;
 }
 
-.half{
+.half {
   width: 50%;
   display: inline-block;
   vertical-align: top;
 }
 
-.text-block{
+.text-block {
   width: 60%;
   padding: 7% 17%;
 }
@@ -100,8 +102,40 @@ button {
 }
 
 .ilustration-working {
-  background-image: url('/images/illustration-working.svg');
+  background-image: url("/images/illustration-working.svg");
+  background-repeat: no-repeat;
+  background-size: 700px;
+  height: 650px;
+}
+
+/* Shortener component */
+
+.Shortener {
+  background-image: url("/images/bg-shorten-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  background-color: #3a3053;
+  padding: 2% 3%;
+  width: 60%;
+  position: absolute;
+  top: 74%;
+  left: 15%;
+  border-radius: 10px;
+}
+
+.Shortener input {
+  width: 78%;
+  height: 50px;
+  border-radius: 6px;
+  padding: 0 2%;
+  border: none;
+}
+
+.Shortener button {
+  margin-left: 5%;
+  width: 140px;
+}
+
+.Shortener .error {
+  color: #e6676c;
 }
