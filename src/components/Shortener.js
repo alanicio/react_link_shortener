@@ -1,19 +1,40 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import axios from "axios";
 
-const Shortener = (props) => {
-  const [link, setLink] = useState("");
+function Link(originalLink, hashid) {
+  this.originalLink = originalLink;
+  this.shortenedLink = `https://rel.ink/${hashid}`;
+}
+
+const Shortener = ({ addLink }) => {
+  const [url, setUrl] = useState("");
   const [error, setError] = useState(false);
 
   const submitLink = (e) => {
     e.preventDefault();
 
-    if (link.length <= 0) {
+    if (url.length <= 0) {
       setError(true);
       return;
     }
 
     setError(false);
+
+    axios
+      .post("https://rel.ink/api/links/", {
+        url: url,
+      })
+      .then(({ data }) => {
+        let { hashid, url } = data;
+        const link = new Link(url, hashid);
+        addLink(link);
+        setUrl("");
+      })
+      .catch((error) => {
+        console.log(error);
+        setError(true);
+      });
   };
 
   return (
@@ -22,9 +43,9 @@ const Shortener = (props) => {
         <input
           type="text"
           placeholder="Shorten a link here..."
-          name="link"
-          value={link}
-          onChange={(e) => setLink(e.target.value)}
+          name="url"
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
         />
         <button type="submit">Shorten it!</button>
         {error ? <small className="error">Please add a link</small> : null}
@@ -33,6 +54,8 @@ const Shortener = (props) => {
   );
 };
 
-Shortener.propTypes = {};
+Shortener.propTypes = {
+  addLink: PropTypes.func.isRequired,
+};
 
 export default Shortener;
