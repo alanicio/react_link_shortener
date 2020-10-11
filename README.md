@@ -6,6 +6,13 @@ https://boring-noether-620c45.netlify.app/
 
 The only interactive part is the url shortener and the generated urls.
 
+The use is able to:
+- Shorten any valid URL
+- See a list of their shortened links, even after refreshing the browser
+- Copy the shortened link to their clipboard in a single click
+- Receive an error message when the `form` is submitted if:
+  - The `input` field is empty
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
