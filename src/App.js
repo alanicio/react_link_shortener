@@ -6,6 +6,7 @@ import Shortener from "./components/Shortener";
 
 function App() {
   const [links, setLinks] = useState([]);
+  const [idCopied, setIdCopied] = useState("");
 
   const addLink = (link) => {
     const url = link.originalLink;
@@ -22,7 +23,12 @@ function App() {
       <div className="content">
         <Shortener addLink={addLink} />
         {links.map((link) => (
-          <Link key={link.id} link={link} />
+          <Link
+            key={link.id}
+            link={link}
+            isCopied={idCopied === link.id ? true : false}
+            setIdCopied={setIdCopied}
+          />
         ))}
       </div>
     </>
