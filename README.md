@@ -6,7 +6,7 @@ https://boring-noether-620c45.netlify.app/
 
 The only interactive part is the url shortener and the generated urls.
 
-The use is able to:
+The user is able to:
 - Shorten any valid URL
 - See a list of their shortened links, even after refreshing the browser
 - Copy the shortened link to their clipboard in a single click
